@@ -1,0 +1,16 @@
+{
+  "settings.output.title": "Clash 管理器",
+  "settings.audit.started": "已在 {target} 上开始 {operation}",
+  "settings.audit.completed": "已在 {target} 上完成 {operation}",
+  "settings.audit.failed": "{target} 上的 {operation} 失败：{error}",
+  "settings.operation.doctor": "诊断",
+  "settings.operation.start": "代理开启",
+  "settings.operation.stop": "代理关闭",
+  "settings.operation.switchSubscription": "订阅切换",
+  "settings.operation.selectProxy": "节点切换",
+  "settings.operation.setMode": "模式切换",
+  "settings.operation.closeConnection": "连接关闭",
+  "settings.operation.closeAllConnections": "全部连接关闭",
+  "settings.logs.header": "{target} 的 Clash 脱敏日志",
+  "settings.logs.empty": "命令未返回日志。"
+}

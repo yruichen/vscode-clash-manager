@@ -1,0 +1,54 @@
+name: Bug report
+description: Report reproducible incorrect behavior.
+title: "[Bug]: "
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: Do not include subscription URLs, secrets, tokens, private keys or raw target output.
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: What happened, and what did you expect?
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Reproduction steps
+      placeholder: |
+        1. Open Clash Manager
+        2. Configure a sanitized local or SSH target
+        3. Run …
+    validations:
+      required: true
+  - type: input
+    id: extension-version
+    attributes:
+      label: Extension version
+      placeholder: 0.1.0
+    validations:
+      required: true
+  - type: input
+    id: vscode-version
+    attributes:
+      label: VS Code version and operating system
+    validations:
+      required: true
+  - type: dropdown
+    id: transport
+    attributes:
+      label: Target transport
+      options:
+        - Local
+        - OpenSSH
+    validations:
+      required: true
+  - type: checkboxes
+    id: safety
+    attributes:
+      label: Safety check
+      options:
+        - label: I removed all secrets, subscription URLs and identifying target details.
+          required: true

@@ -1,0 +1,16 @@
+{
+  "settings.output.title": "Clash Manager",
+  "settings.audit.started": "Started {operation} on {target}",
+  "settings.audit.completed": "Completed {operation} on {target}",
+  "settings.audit.failed": "Failed {operation} on {target}: {error}",
+  "settings.operation.doctor": "diagnostics",
+  "settings.operation.start": "proxy start",
+  "settings.operation.stop": "proxy stop",
+  "settings.operation.switchSubscription": "subscription switch",
+  "settings.operation.selectProxy": "proxy selection",
+  "settings.operation.setMode": "mode switch",
+  "settings.operation.closeConnection": "connection close",
+  "settings.operation.closeAllConnections": "all-connections close",
+  "settings.logs.header": "Sanitized Clash logs for {target}",
+  "settings.logs.empty": "No log output was returned."
+}

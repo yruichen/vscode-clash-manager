@@ -1,0 +1,14 @@
+{
+  "statusbar.on": "Clash: On",
+  "statusbar.off": "Clash: Off",
+  "statusbar.checking": "Clash: Checking",
+  "statusbar.stale": "Clash: Stale",
+  "statusbar.error": "Clash: Error",
+  "statusbar.setup": "Clash: Setup",
+  "statusbar.tooltip.on": "{target}: proxy kernel is running. Click to open Clash Manager.",
+  "statusbar.tooltip.off": "{target}: proxy kernel is stopped. Click to open Clash Manager.",
+  "statusbar.tooltip.checking": "Checking {target}. Last known state: {state}.",
+  "statusbar.tooltip.stale": "{target}: status is stale. Last updated {time}.",
+  "statusbar.tooltip.error": "{target}: {error}. Click to diagnose.",
+  "statusbar.tooltip.setup": "Configure a local or SSH Clash target."
+}

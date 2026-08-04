@@ -1,0 +1,14 @@
+{
+  "statusbar.on": "Clash：已开启",
+  "statusbar.off": "Clash：已关闭",
+  "statusbar.checking": "Clash：检查中",
+  "statusbar.stale": "Clash：状态过期",
+  "statusbar.error": "Clash：错误",
+  "statusbar.setup": "Clash：配置",
+  "statusbar.tooltip.on": "{target}：代理内核正在运行。点击打开 Clash 管理器。",
+  "statusbar.tooltip.off": "{target}：代理内核已停止。点击打开 Clash 管理器。",
+  "statusbar.tooltip.checking": "正在检查 {target}，上次状态：{state}。",
+  "statusbar.tooltip.stale": "{target}：状态已过期，上次更新于 {time}。",
+  "statusbar.tooltip.error": "{target}：{error}。点击诊断。",
+  "statusbar.tooltip.setup": "配置本机或 SSH Clash 目标。"
+}

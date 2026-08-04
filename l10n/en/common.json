@@ -1,0 +1,22 @@
+{
+  "common.appName": "Clash Manager",
+  "common.unknown": "Unknown",
+  "common.unavailable": "Unavailable",
+  "common.unsupported": "Unsupported",
+  "common.on": "On",
+  "common.off": "Off",
+  "common.yes": "Yes",
+  "common.no": "No",
+  "common.refresh": "Refresh",
+  "common.configure": "Configure",
+  "common.cancel": "Cancel",
+  "common.close": "Close",
+  "common.loading": "Loading…",
+  "common.never": "Never",
+  "common.active": "Active",
+  "common.connected": "Connected",
+  "common.disconnected": "Disconnected",
+  "common.items": "{count} items",
+  "common.milliseconds": "{value} ms",
+  "common.lastUpdated": "Updated {time}"
+}

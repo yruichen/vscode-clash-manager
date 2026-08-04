@@ -1,0 +1,283 @@
+{
+  "name": "vscode-clash-manager",
+  "displayName": "%extension.displayName%",
+  "description": "%extension.description%",
+  "version": "0.1.0",
+  "publisher": "yruichen",
+  "license": "SEE LICENSE IN LICENSE.txt",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yruichen/vscode-clash-manager.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yruichen/vscode-clash-manager/issues"
+  },
+  "homepage": "https://github.com/yruichen/vscode-clash-manager#readme",
+  "engines": {
+    "vscode": "^1.90.0"
+  },
+  "categories": [
+    "Other",
+    "Visualization"
+  ],
+  "keywords": [
+    "clash",
+    "mihomo",
+    "proxy",
+    "vpn",
+    "ssh"
+  ],
+  "extensionKind": [
+    "ui"
+  ],
+  "activationEvents": [
+    "onStartupFinished",
+    "onView:clashManager.sidebar"
+  ],
+  "main": "./out/src/extension.js",
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "node scripts/clean-output.js && tsc -p ./",
+    "watch": "tsc -w -p ./",
+    "check:locales": "node scripts/check-locales.js",
+    "check:secrets": "node scripts/check-secrets.js",
+    "test": "npm run compile && npm run check:locales && npm run check:secrets && node --test out/test/*.test.js",
+    "smoke:remote": "npm run compile && node scripts/remote-smoke.js",
+    "package:vsix": "vsce package --out vscode-clash-manager.vsix",
+    "package": "npm run test && npm run package:vsix"
+  },
+  "contributes": {
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "clashManager",
+          "title": "%view.container.title%",
+          "icon": "resources/icons/clash-manager.svg"
+        }
+      ]
+    },
+    "views": {
+      "clashManager": [
+        {
+          "id": "clashManager.sidebar",
+          "name": "%view.sidebar.name%",
+          "icon": "resources/icons/clash-manager.svg",
+          "contextualTitle": "%view.sidebar.contextualTitle%"
+        }
+      ]
+    },
+    "commands": [
+      {
+        "command": "clashManager.show",
+        "title": "%command.show%",
+        "category": "%command.category%",
+        "icon": "$(shield)"
+      },
+      {
+        "command": "clashManager.refresh",
+        "title": "%command.refresh%",
+        "category": "%command.category%",
+        "icon": "$(refresh)"
+      },
+      {
+        "command": "clashManager.configureTarget",
+        "title": "%command.configureTarget%",
+        "category": "%command.category%",
+        "icon": "$(remote)"
+      },
+      {
+        "command": "clashManager.toggleProxy",
+        "title": "%command.toggleProxy%",
+        "category": "%command.category%",
+        "icon": "$(power)"
+      },
+      {
+        "command": "clashManager.runDoctor",
+        "title": "%command.runDoctor%",
+        "category": "%command.category%",
+        "icon": "$(pulse)"
+      },
+      {
+        "command": "clashManager.setLanguage",
+        "title": "%command.setLanguage%",
+        "category": "%command.category%"
+      },
+      {
+        "command": "clashManager.setControllerSecret",
+        "title": "%command.setControllerSecret%",
+        "category": "%command.category%"
+      },
+      {
+        "command": "clashManager.clearControllerSecret",
+        "title": "%command.clearControllerSecret%",
+        "category": "%command.category%"
+      },
+      {
+        "command": "clashManager.openLogs",
+        "title": "%command.openLogs%",
+        "category": "%command.category%"
+      },
+      {
+        "command": "clashManager.switchSubscription",
+        "title": "%command.switchSubscription%",
+        "category": "%command.category%"
+      },
+      {
+        "command": "clashManager.selectProxy",
+        "title": "%command.selectProxy%",
+        "category": "%command.category%"
+      },
+      {
+        "command": "clashManager.setMode",
+        "title": "%command.setMode%",
+        "category": "%command.category%"
+      },
+      {
+        "command": "clashManager.closeConnection",
+        "title": "%command.closeConnection%",
+        "category": "%command.category%",
+        "icon": "$(close)"
+      },
+      {
+        "command": "clashManager.closeAllConnections",
+        "title": "%command.closeAllConnections%",
+        "category": "%command.category%",
+        "icon": "$(trash)"
+      },
+      {
+        "command": "clashManager.pickProxy",
+        "title": "%command.pickProxy%",
+        "category": "%command.category%"
+      },
+      {
+        "command": "clashManager.pickSubscription",
+        "title": "%command.pickSubscription%",
+        "category": "%command.category%"
+      },
+      {
+        "command": "clashManager.pickMode",
+        "title": "%command.pickMode%",
+        "category": "%command.category%"
+      }
+    ],
+    "menus": {
+      "view/title": [
+        {
+          "command": "clashManager.configureTarget",
+          "when": "view == clashManager.sidebar",
+          "group": "navigation@1"
+        },
+        {
+          "command": "clashManager.refresh",
+          "when": "view == clashManager.sidebar",
+          "group": "navigation@2"
+        }
+      ],
+      "view/item/context": [
+        {
+          "command": "clashManager.toggleProxy",
+          "when": "view == clashManager.sidebar && viewItem == clashManager.lifecycle",
+          "group": "inline@1"
+        },
+        {
+          "command": "clashManager.closeConnection",
+          "when": "view == clashManager.sidebar && viewItem == clashManager.connection",
+          "group": "inline@1"
+        },
+        {
+          "command": "clashManager.closeAllConnections",
+          "when": "view == clashManager.sidebar && viewItem == clashManager.connectionsSection",
+          "group": "inline@1"
+        }
+      ]
+    },
+    "configuration": {
+      "title": "%configuration.title%",
+      "properties": {
+        "clashManager.language": {
+          "type": "string",
+          "enum": [
+            "en",
+            "zh-CN"
+          ],
+          "enumDescriptions": [
+            "%configuration.language.en%",
+            "%configuration.language.zhCN%"
+          ],
+          "default": "en",
+          "scope": "window",
+          "description": "%configuration.language.description%"
+        },
+        "clashManager.transport": {
+          "type": "string",
+          "enum": [
+            "local",
+            "ssh"
+          ],
+          "default": "local",
+          "scope": "machine-overridable",
+          "description": "%configuration.transport.description%"
+        },
+        "clashManager.sshTarget": {
+          "type": "string",
+          "default": "",
+          "scope": "machine-overridable",
+          "description": "%configuration.sshTarget.description%"
+        },
+        "clashManager.clashctlPath": {
+          "type": "string",
+          "default": "clashctl",
+          "scope": "machine-overridable",
+          "description": "%configuration.clashctlPath.description%"
+        },
+        "clashManager.autoRefresh": {
+          "type": "boolean",
+          "default": true,
+          "scope": "window",
+          "description": "%configuration.autoRefresh.description%"
+        },
+        "clashManager.refreshInterval": {
+          "type": "number",
+          "default": 5,
+          "minimum": 2,
+          "maximum": 300,
+          "scope": "window",
+          "description": "%configuration.refreshInterval.description%"
+        },
+        "clashManager.commandTimeout": {
+          "type": "number",
+          "default": 12,
+          "minimum": 2,
+          "maximum": 120,
+          "scope": "machine-overridable",
+          "description": "%configuration.commandTimeout.description%"
+        },
+        "clashManager.controller.url": {
+          "type": "string",
+          "default": "",
+          "scope": "machine-overridable",
+          "description": "%configuration.controllerUrl.description%"
+        },
+        "clashManager.controller.autoDiscover": {
+          "type": "boolean",
+          "default": true,
+          "scope": "machine-overridable",
+          "description": "%configuration.controllerAutoDiscover.description%"
+        },
+        "clashManager.showSensitiveAddresses": {
+          "type": "boolean",
+          "default": false,
+          "scope": "window",
+          "description": "%configuration.showSensitiveAddresses.description%"
+        }
+      }
+    }
+  },
+  "devDependencies": {
+    "@types/node": "^20.19.43",
+    "@types/vscode": "1.90.0",
+    "@vscode/vsce": "^3.9.2",
+    "typescript": "^5.9.3"
+  }
+}

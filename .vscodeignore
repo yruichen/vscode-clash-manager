@@ -1,0 +1,15 @@
+.github/**
+.gitignore
+.vscode/**
+.playwright-cli/**
+docs/**
+preview/**
+scripts/**
+src/**
+test/**
+tsconfig.json
+package-lock.json
+out/test/**
+out/**/*.map
+*.vsix
+debug-artifacts/**

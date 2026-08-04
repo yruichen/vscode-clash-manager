@@ -1,0 +1,22 @@
+{
+  "common.appName": "Clash 管理器",
+  "common.unknown": "未知",
+  "common.unavailable": "不可用",
+  "common.unsupported": "不支持",
+  "common.on": "开启",
+  "common.off": "关闭",
+  "common.yes": "是",
+  "common.no": "否",
+  "common.refresh": "刷新",
+  "common.configure": "配置",
+  "common.cancel": "取消",
+  "common.close": "关闭",
+  "common.loading": "加载中…",
+  "common.never": "从未",
+  "common.active": "当前",
+  "common.connected": "已连接",
+  "common.disconnected": "未连接",
+  "common.items": "{count} 项",
+  "common.milliseconds": "{value} 毫秒",
+  "common.lastUpdated": "更新于 {time}"
+}
