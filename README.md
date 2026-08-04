@@ -64,4 +64,4 @@ The packaged extension is written to `vscode-clash-manager.vsix` and is intentio
 
 ## License
 
-Copyright © 2026 yruichen. This project is private and proprietary; see [LICENSE.txt](LICENSE.txt).
+Released under the [MIT License](LICENSE.txt).

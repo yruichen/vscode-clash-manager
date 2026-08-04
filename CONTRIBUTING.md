@@ -1,6 +1,6 @@
 # Contributing
 
-This is a proprietary project. Contributions require prior authorization from the copyright holder.
+Contributions are welcome through focused issues and pull requests. By contributing, you agree that your work will be distributed under the MIT License.
 
 ## Development workflow
 
@@ -8,7 +8,7 @@ This is a proprietary project. Contributions require prior authorization from th
 2. Install locked dependencies with `npm ci`.
 3. Keep all user-facing text in `l10n/en` and `l10n/zh-CN`.
 4. Run `npm test` before opening a pull request.
-5. Keep commits focused and explain user-visible behavior in the pull request.
+5. Keep commits focused, use clear commit messages and explain user-visible behavior in the pull request.
 
 ## Security rules
 

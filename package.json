@@ -4,7 +4,7 @@
   "description": "%extension.description%",
   "version": "0.1.0",
   "publisher": "yruichen",
-  "license": "SEE LICENSE IN LICENSE.txt",
+  "license": "MIT",
   "private": true,
   "repository": {
     "type": "git",
