@@ -2,6 +2,8 @@
 
 Contributions are welcome through focused issues and pull requests. By contributing, you agree that your work will be distributed under the MIT License.
 
+All participation is governed by the [Contributor Covenant Code of Conduct](CODE_OF_CONDUCT.md).
+
 ## Development workflow
 
 1. Use Node.js 20 and a current npm release.
